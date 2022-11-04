@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/batch_db
+    username: root
+    password: 543210
+    platform: mysql
+    initialization-mode: always
+    schema: classpath*:schema.sql
+    driver-class-name: com.mysql.jdbc.Driver
+  batch:
+    initialize-schema: always
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    generate-ddl: true
